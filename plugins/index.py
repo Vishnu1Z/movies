@@ -125,8 +125,12 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot, skip):
                 elif media.mime_type not in ['video/mp4', 'video/x-matroska']:
                     unsupported += 1
                     continue
-                media.caption = message.caption
-                sts = await save_file(media)
+             media.caption = message.caption
+             if message.document:
+            media.thumbs = message.document.thumbs
+            elif message.video:
+            media.thumbs = message.video.thumbs
+            sts = await save_file(media)
                 if sts == 'suc':
                     total_files += 1
                 elif sts == 'dup':
