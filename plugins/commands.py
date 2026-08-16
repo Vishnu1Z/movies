@@ -346,11 +346,12 @@ async def start(client:Client, message):
                 InlineKeyboardButton("✛ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ ✛", callback_data=f'stream#{file.file_id}')
             ]]
             toDel = await client.send_cached_media(
-                chat_id=message.from_user.id,
-                file_id=file.file_id,
-                caption=f_caption,
-                reply_markup=InlineKeyboardMarkup(btn)
-            )
+            chat_id=message.from_user.id,
+            file_id=file.file_id,
+            caption=f_caption,
+            thumb=file.thumb,
+            reply_markup=InlineKeyboardMarkup(btn)
+             )
             files_to_delete.append(toDel)
 
         delCap = "<b>ᴀʟʟ {} ғɪʟᴇs ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ {} ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ᴠɪᴏʟᴀᴛɪᴏɴs!</b>".format(len(files_to_delete), f'{FILE_AUTO_DEL_TIMER / 60} ᴍɪɴᴜᴛᴇs' if FILE_AUTO_DEL_TIMER >= 60 else f'{FILE_AUTO_DEL_TIMER} sᴇᴄᴏɴᴅs')
