@@ -47,8 +47,9 @@ async def save_file(media):
     mime_type=media.mime_type,
     caption=media.caption.html if media.caption else None,
     file_type=media.mime_type.split('/')[0],
-    message_id=media.id
-     )
+    message_id=media.id,
+    thumb=media.thumbs[0].file_id if hasattr(media, "thumbs") and media.thumbs else None
+)
         
     except ValidationError:
         print('Error occurred while saving file in database')
