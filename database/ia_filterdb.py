@@ -23,6 +23,7 @@ class Media(Document):
     caption = fields.StrField(allow_none=True)
     file_type = fields.StrField(allow_none=True)
     message_id = fields.IntField(allow_none=True)
+    thumb = fields.StrField(allow_none=True)
 
     class Meta:
         indexes = ('$file_name', )
