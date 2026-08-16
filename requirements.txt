@@ -1,5 +1,4 @@
 pyrofork==2.3.43 
-git+https://github.com/Jisshubot/pyrogram.git
 tgcrypto 
 pymongo==4.8.0 
 motor==3.5.1 
@@ -10,19 +9,14 @@ Heroku3
 search_engine_parser 
 wget 
 aiofiles 
-ffmpeg-python  
 requests 
 aiohttp 
 telegraph 
 ujson 
-pyshorteners 
-datetime 
 pytz 
-dnspython==2.3.0 
 speedtest-cli 
 shortzy 
 fuzzywuzzy 
-wheel 
 gunicorn==20.1.0 
 werkzeug==2.0.2 
 Flask 
@@ -31,13 +25,13 @@ python-Levenshtein
  
  
 #jisshu 
- python-dotenv==0.21.1  
- humanize==4.6.0  
- Pillow
- psutil==5.9.4  
- NumPy  
- wheel  
- dnspython==2.3.0 
+python-dotenv==0.21.1  
+humanize==4.6.0  
+Pillow
+psutil==5.9.4  
+numpy
+wheel  
+dnspython==2.3.0 
 python-decouple 
 ffmpeg-python>=0.2.0 
  
