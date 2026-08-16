@@ -10,8 +10,7 @@ Heroku3
 search_engine_parser 
 wget 
 aiofiles 
-ffmpeg-python 
-ffmpeg 
+ffmpeg-python  
 requests 
 aiohttp 
 telegraph 
@@ -20,7 +19,6 @@ pyshorteners
 datetime 
 pytz 
 dnspython==2.3.0 
-python-math 
 speedtest-cli 
 shortzy 
 fuzzywuzzy 
@@ -33,11 +31,9 @@ python-Levenshtein
  
  
 #jisshu 
-opencv-python-headless==4.7.0.68  
  python-dotenv==0.21.1  
- speedtest==0.0.1  
  humanize==4.6.0  
- Pillow==9.4.0  
+ Pillow
  psutil==5.9.4  
  NumPy  
  wheel  
